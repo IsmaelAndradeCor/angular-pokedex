@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { PokedexComponent } from './components/pokedex/pokedex.component';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PokedexComponent],
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  template: `<app-pokedex></app-pokedex>`,
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'angular-pokedex';
-}
+export class AppComponent {}
